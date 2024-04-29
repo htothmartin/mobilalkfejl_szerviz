@@ -7,4 +7,8 @@
     <string name="email">Email</string>
     <string name="password_again">Jelszó megerősítése</string>
     <string name="phone">Telefonszám</string>
+    <string name="profil_oldal">Profil oldal</string>
+    <string name="logout">Kilepes</string>
+    <string name="pick_date">Válassz dátumot:</string>
+    <string name="book">Foglalás</string>
 </resources>
