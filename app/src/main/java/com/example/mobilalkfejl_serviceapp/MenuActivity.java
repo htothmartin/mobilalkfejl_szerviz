@@ -2,10 +2,12 @@ package com.example.mobilalkfejl_serviceapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -35,6 +37,7 @@ public class MenuActivity extends AppCompatActivity {
 
     private CollectionReference mServices;
 
+    private ProgressBar spinner;
     private ArrayList<ServiceItem> mServiceItems;
     private ArrayAdapter<ServiceItem> adapter;
 
@@ -52,6 +55,7 @@ public class MenuActivity extends AppCompatActivity {
         }
 
         list = findViewById(R.id.serviceListView);
+        spinner = findViewById(R.id.simpleProgressBar);
         mFirestore = FirebaseFirestore.getInstance();
         mServices = mFirestore.collection("ServiceOptions");
         db = FirestoreRepository.getInstance();
@@ -65,6 +69,12 @@ public class MenuActivity extends AppCompatActivity {
         queryData();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+    }
+
     private void queryData(){
 
         db.getServiceList(new OnSuccessListener<QuerySnapshot>() {
@@ -75,6 +85,7 @@ public class MenuActivity extends AppCompatActivity {
                     mServiceItems.add(item);
                 }
                 adapter.notifyDataSetChanged();
+                spinner.setVisibility(View.GONE);
             }
         });
     }

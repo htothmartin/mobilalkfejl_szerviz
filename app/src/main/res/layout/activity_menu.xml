@@ -41,6 +41,8 @@
                 android:contentDescription="@string/profil_oldal" />
         </androidx.appcompat.widget.Toolbar>
 
+
+
         <ListView
             android:id="@+id/serviceListView"
             android:layout_width="match_parent"
@@ -49,6 +51,13 @@
 
     </RelativeLayout>
 
-
+    <ProgressBar
+        android:id="@+id/simpleProgressBar"
+        android:layout_width="96dp"
+        android:layout_height="105dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

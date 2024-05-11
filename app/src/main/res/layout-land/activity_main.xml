@@ -30,6 +30,17 @@
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="20dp" />
 
+    <ProgressBar
+        android:id="@+id/simpleProgressBar"
+        android:layout_width="96dp"
+        android:layout_height="105dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.362" />
+
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"

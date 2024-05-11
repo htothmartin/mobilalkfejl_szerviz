@@ -2,9 +2,11 @@ package com.example.mobilalkfejl_serviceapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -25,6 +27,15 @@ public class MainActivity extends AppCompatActivity {
     private static final String LOG_TAG = MainActivity.class.getName();
     private static final int SECRET_KEY = 45;
 
+    private ProgressBar spinner;
+    private Handler handler = new Handler();
+    private Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            spinner.setVisibility(View.GONE);
+        }
+    };
+
     private FirebaseAuth mAuth;
 
     EditText emailET;
@@ -36,10 +47,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         mAuth = FirebaseAuth.getInstance();
 
         emailET = findViewById(R.id.editTextEmail);
         passwordET = findViewById(R.id.editTextPassword);
+        spinner = findViewById(R.id.simpleProgressBar);
+        spinner.setVisibility(View.GONE);
 
     }
 
@@ -54,7 +69,10 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Log.d(LOG_TAG, "Successful login!");
+                    spinner.setVisibility(View.VISIBLE);
                     startMenu();
+                    handler.postDelayed(runnable, 2000);
+
                 } else {
                     Log.d(LOG_TAG, "Failed login!");
                     Toast.makeText(MainActivity.this, "Sikertelen bejelentkezes: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();

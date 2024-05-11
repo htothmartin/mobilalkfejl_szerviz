@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">mobilalkfejl_serviceapp</string>
+    <string name="app_name">IT Szervíz</string>
     <string name="username">Felhasználónév</string>
     <string name="password">Jelszó</string>
     <string name="login">Bejelentkezés</string>
