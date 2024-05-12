@@ -11,4 +11,12 @@
     <string name="logout">Kilepes</string>
     <string name="pick_date">Válassz dátumot:</string>
     <string name="book">Foglalás</string>
+    <string name="service_name">Szervíz neve</string>
+    <string name="choosen_date">Választott dátum:</string>
+    <string name="choose_date">Dátum választása</string>
+    <string name="choosen_time">Választott időpont:</string>
+    <string name="price">Ár: 10.000 Ft</string>
+    <string name="time">Időtartam: 60 perc</string>
+    <string name="description">Szervíz leírása</string>
+    <string name="delete">Törlés</string>
 </resources>

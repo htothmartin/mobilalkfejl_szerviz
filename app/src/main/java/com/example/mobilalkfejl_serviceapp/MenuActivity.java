@@ -25,7 +25,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends BaseActivity {
 
     private static final String LOG_TAG = MainActivity.class.getName();
     private static final int SECRET_KEY = 45;
@@ -96,10 +96,4 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void logout(View view) {
-        FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
 }

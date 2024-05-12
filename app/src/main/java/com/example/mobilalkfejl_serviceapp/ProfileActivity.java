@@ -27,7 +27,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class ProfileActivity extends AppCompatActivity {
+public class ProfileActivity extends BaseActivity {
 
     private static final String LOG_TAG = MainActivity.class.getName();
 
@@ -142,13 +142,6 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void toMain(View view) {
-        finish();
-    }
-
-    public void logout(View view) {
-        FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
         finish();
     }
 }

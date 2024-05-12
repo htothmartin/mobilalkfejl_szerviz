@@ -29,7 +29,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-public class ServiceDetailActivity extends AppCompatActivity {
+public class ServiceDetailActivity extends BaseActivity {
 
     private static final String LOG_TAG = MainActivity.class.getName();
 
@@ -153,12 +153,5 @@ public class ServiceDetailActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ProfileActivity.class);
         intent.putExtra("SECRET_KEY", SECRET_KEY);
         startActivity(intent);
-    }
-
-    public void logout(View view) {
-        FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
     }
 }

@@ -11,59 +11,59 @@
         android:id="@+id/editTextUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:hint="@string/username"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.043"
-        tools:layout_editor_absoluteX="20dp" />
+        tools:layout_editor_absoluteX="30dp" />
 
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:hint="@string/email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextUsername"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="36dp" />
+        tools:layout_editor_absoluteX="15dp" />
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextEmail"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="20dp" />
+        tools:layout_editor_absoluteX="15dp" />
 
     <EditText
         android:id="@+id/editTextPasswordAgain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:hint="@string/password_again"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextPassword"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="20dp" />
+        tools:layout_editor_absoluteX="16dp" />
 
     <EditText
         android:id="@+id/editTextPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:hint="@string/phone"
         android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextPasswordAgain"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="24dp" />
+        tools:layout_editor_absoluteX="16dp" />
 
     <Button
         android:id="@+id/buttonRegister"

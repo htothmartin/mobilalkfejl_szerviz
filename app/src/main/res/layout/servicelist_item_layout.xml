@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/service_name"
-        android:layout_width="236dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textSize="16sp" />
@@ -24,5 +24,5 @@
         android:id="@+id/book_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Foglalás" />
+        android:text="@string/book" />
 </LinearLayout>
